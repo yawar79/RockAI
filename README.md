@@ -1,0 +1,2 @@
+# RockAI
+Mining Lithology Predictor 
