@@ -366,8 +366,12 @@ elif option == "Take Picture":
 
         # Button for displaying physical tests description
         if st.button("Description of Physical Tests"):
-            col2.markdown("### Physical Tests Description:")
-            col2.write("Here are the descriptions of the physical tests:")
 
-            for test, description in physical_tests_info[predicted_label_name].items():
-                col2.write(f"**{test}:** {description}")
+            # Print all tests along with their descriptions using Streamlit's write function
+            for test_name, test_info in tests_info.items():
+                st.write(f"## {test_name}:")
+                st.write(f"**Description:** {test_info['description']}")
+                st.write("Options for User to Select:")
+                for option_desc, option_value in test_info['options'].items():
+                    st.write(f"- {option_desc}")
+                st.write()
