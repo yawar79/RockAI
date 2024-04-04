@@ -8,7 +8,7 @@ import base64
 
 
 # Load the TFlite model for core/non-core classification model
-core_non_core_model_path = 'finetuning_core_nonecore_model_20240330.tflite'
+core_non_core_model_path = 'core_nonecore_model_20240330.tflite'
 core_non_core_interpreter = tf.lite.Interpreter(model_path=core_non_core_model_path)
 core_non_core_interpreter.allocate_tensors()
 
